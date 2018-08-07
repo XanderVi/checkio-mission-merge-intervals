@@ -7,7 +7,6 @@ requirejs(['ext_editor_io', 'jquery_190'],
 
         var io = new extIO({
             functions: {
-                js: 'mergeIntervals',
                 python: 'merge_intervals'
             }
         });

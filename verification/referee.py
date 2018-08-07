@@ -34,10 +34,11 @@ from checkio.referees import cover_codes
 from tests import TESTS
 
 cover_code = '''
-
 def cover(func, in_data):
-    return func([tuple(item) for item in in_data])
-
+    res = func(set(in_data))
+    assert hasattr(res, '__iter__'), "your function should return the iterator object"
+    assert hasattr(res, '__next__'), "your function should return the iterator object"
+    return list(res)
 '''
 
 api.add_listener(
@@ -45,8 +46,7 @@ api.add_listener(
     CheckiOReferee(
         tests=TESTS,
         function_name={
-            "python": "merge_intervals",
-            "js": "mergeIntervals"
+            "python": "merge_intervals"
         },
         cover_code={
             'python-3': cover_code
