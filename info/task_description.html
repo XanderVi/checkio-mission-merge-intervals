@@ -51,18 +51,10 @@
   <p>
       <strong>Examples:</strong><br>
   </p>
-  {% if interpreter.slug == "js-node" %}
   <pre class="brush: python">
-mergeIntervals([[1, 4], [2, 6], [8, 10], [12, 19]]) == [[1, 6], [8, 10], [12, 19]]
-mergeIntervals([[1, 12], [2, 3], [4, 7]]) == [[1, 12]]
-mergeIntervals([[1, 5], [6, 10], [10, 15], [17, 20]]) == [[1, 15], [17, 20]]</pre>
-  {% else %}
-  <pre class="brush: python">
-merge_intervals([(1, 4), (2, 6), (8, 10), (12, 19)]) == [(1, 6), (8, 10), (12, 19)]
-merge_intervals([(1, 12), (2, 3), (4, 7)]) == [(1, 12)]
-merge_intervals([(1, 5), (6, 10), (10, 15), (17, 20)]) == [(1, 15), (17, 20)]</pre>
-  {% endif %}
-
+list(merge_intervals([(1, 4), (2, 6), (8, 10), (12, 19)])) == [(1, 6), (8, 10), (12, 19)]
+list(merge_intervals([(1, 12), (2, 3), (4, 7)])) == [(1, 12)]
+list(merge_intervals([(1, 5), (6, 10), (10, 15), (17, 20)])) == [(1, 15), (17, 20)]</pre>
 </div>
 
 <p>
