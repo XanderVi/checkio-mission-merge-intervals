@@ -35,7 +35,7 @@ from tests import TESTS
 
 cover_code = '''
 def cover(func, in_data):
-    res = func(iter(in_data))
+    res = func(in_data)
     assert hasattr(res, '__iter__'), "your function should return the iterator object"
     assert hasattr(res, '__next__'), "your function should return the iterator object"
     return list(res)
