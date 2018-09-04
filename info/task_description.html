@@ -1,5 +1,5 @@
 <p>
-  You are given a sequence of intervals, as iterator of the iterators of ints.<br>
+  You are given a sequence of intervals, as iterator of the tuples of ints.<br>
   It is your task to minimize the number of intervals by merging those that intersect or
   by removing intervals fitting into another one. After that you have to create an iterator object which is linked to this list.
 </p>
@@ -38,7 +38,7 @@
 
 <p>
   <strong>Input:</strong>
-  A sequence of intervals as an iterator of the iterators of 2 ints.
+  A sequence of intervals as an iterator of the tuples of 2 ints.
 </p>
 
 <p>
@@ -51,7 +51,7 @@
       <strong>Examples:</strong><br>
   </p>
   <pre class="brush: python">
-list(merge_intervals(iter([iter([1, 4]), iter([2, 6]), iter([8, 10]), iter([12, 19])]))) == [(1, 6), (8, 10), (12, 19)]
-list(merge_intervals(iter([iter([1, 12]), iter([2, 3]), iter([4, 7])]))) == [(1, 12)]
-list(merge_intervals(iter([iter([1, 5]), iter([6, 10]), iter([10, 15]), iter([17, 20])]))) == [(1, 15), (17, 20)]</pre>
+list(merge_intervals(iter([(1, 4), (2, 6), (8, 10), (12, 19)]))) == [(1, 6), (8, 10), (12, 19)]
+list(merge_intervals(iter([(1, 12), (2, 3), (4, 7)]))) == [(1, 12)]
+list(merge_intervals(iter([(1, 5), (6, 10), (10, 15), (17, 20)]))) == [(1, 15), (17, 20)]</pre>
 </div>
