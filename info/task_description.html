@@ -1,8 +1,7 @@
 <p>
-  You are given a sequence of intervals as tuples of ints where the tuples are sorted by
-  their first element in ascending order.<br>
-  Your task is to minimize the number of intervals by merging those that intersect or
-  by removing those that are a part of other intervals. After that you have to create an iterator object which is linked to this list.
+  You are given a sequence of intervals, as iterator of the iterators of ints.<br>
+  It is your task to minimize the number of intervals by merging those that intersect or
+  by removing intervals fitting into another one. After that you have to create an iterator object which is linked to this list.
 </p>
 
 <p>
@@ -56,20 +55,3 @@ list(merge_intervals(iter([iter([1, 4]), iter([2, 6]), iter([8, 10]), iter([12, 
 list(merge_intervals(iter([iter([1, 12]), iter([2, 3]), iter([4, 7])]))) == [(1, 12)]
 list(merge_intervals(iter([iter([1, 5]), iter([6, 10]), iter([10, 15]), iter([17, 20])]))) == [(1, 15), (17, 20)]</pre>
 </div>
-<p>
-  <strong>Precondition:</strong><br>
-  {% if interpreter.slug == "js-node" %}
-  <ul>
-    <li>sorted by 1st element of the list
-    </li>
-    <li>interval[0] <= interval[1]</li>
-  </ul>
-  {% else %}
-  <ul>
-    <li>intervals == sorted(intervals, key=lambda x: x[0])  # sorted by 1st element of
-      the tuples
-    </li>
-    <li>interval[0] <= interval[1]</li>
-  </ul>
-  {% endif %}
-</p>
